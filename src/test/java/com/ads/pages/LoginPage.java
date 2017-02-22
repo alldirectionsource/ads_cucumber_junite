@@ -13,7 +13,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.ads.pages.wallSummaryPage;
+import com.ads.pages.HomePage;
 import com.ads.steps.BrowserDI;
 import com.ads.utility.ConfigProperty;
 import com.ads.utility.lib;
@@ -51,11 +51,16 @@ public class LoginPage extends adsWebPage {
 	public int setShort_Time = 2000;
 	ConfigProperty property = new ConfigProperty();
 
-	public LoginPage(BrowserDI driver) {
+	public LoginPage (BrowserDI driver){
 		super(driver);
+	}
+
+
+	//public LoginPage(BrowserDI driver) {
+//		super(driver);
 		// page = driver.Attest;
 		// PageHeader header = new PageHeader(AttestDriver Attes);
-	}
+	//}
 
 	ConfigProperty Util = new ConfigProperty();
 	int flg;
@@ -117,7 +122,7 @@ public class LoginPage extends adsWebPage {
 
 	}
 
-	public wallSummaryPage login(String userName, String password) throws InterruptedException {
+	public HomePage login(String userName, String password) throws InterruptedException {
 
 		try {
 
@@ -156,7 +161,7 @@ public class LoginPage extends adsWebPage {
 			System.out.println(e);
 			System.out.println("##############log End here############");
 		}
-		return new wallSummaryPage(browser);
+		return new HomePage(browser);
 	}
 
 	public String checkWarningMessage() {

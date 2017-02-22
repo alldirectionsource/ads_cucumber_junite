@@ -63,7 +63,6 @@ import io.appium.java_client.ios.IOSDriver;
  */
 public class BrowserDI extends EventFiringWebDriver {
 
-	/** The browser. */
 	public static WebDriver BROWSER = null;
 
 	/** The workingdirectory. */
